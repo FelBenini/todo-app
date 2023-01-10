@@ -8,52 +8,53 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 const cookies = new Cookies()
 
 function App() {
-  const [alignment, setAlignment] = useState('personal')
+  const [type, setType] = useState('personal')
   const [arrayOfObjects, setArrayOfObjects] = useState(cookies.get('arrayOfObjects') || []);
   const [name, setName] = useState('');
+  const [borderColor, setBorderColor] = useState()
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newObject = { id: Date.now(), name, situation: "incomplete", type: alignment };
-    setArrayOfObjects([...arrayOfObjects, newObject]);
-    cookies.set('arrayOfObjects', [...arrayOfObjects, newObject], { path: '/' });
-    setName('')
+    if (name !== "") {
+      const newObject = { id: Date.now(), name, situation: "incomplete", type: type };
+      setArrayOfObjects([...arrayOfObjects, newObject]);
+      cookies.set('arrayOfObjects', [...arrayOfObjects, newObject], { path: '/' });
+      setName('')
+    }
   }
 
-    const handleAlignment = (event, newAlignment) => {
+  const handleTypeChange = (event, newAlignment) => {
     if (newAlignment !== null) {
-      setAlignment(event.target.value);
+      setType(event.target.value);
+    }
+    if (type === "professional") {
+      setBorderColor('#09CAAD80')
+    } else if (type === "personal") {
+      setBorderColor('#D5804280')
     }
   };
 
   return (
-    <div>
-      {arrayOfObjects.map((object) => (
-        <TodoItem id={object.id} type={object.type} name={object.name}/>
-      ))}
+    <main>
       <form onSubmit={handleSubmit}>
-        <ToggleButtonGroup
-        value={alignment}
-        exclusive
-        onChange={handleAlignment}
-        aria-label="text alignment"
-      >
-        <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '50px', width: '50vw'}}>
-          Personal
-        </ToggleButton>
-        <ToggleButton value="professional" aria-label="centered" sx={{ borderRadius: '50px', width: '50vw'}}>
-          Professional
-        </ToggleButton>
-      </ToggleButtonGroup>
+        <ToggleButtonGroup value={type} exclusive onChange={handleTypeChange} aria-label="text alignment">
+          <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '4px', width: '125px', height: '40px', textTransform: 'none', fontFamily: "'Raleway', sans-serif" }} color="primary">
+            Personal
+          </ToggleButton>
+          <ToggleButton value="professional" aria-label="centered" sx={{ borderRadius: '4px', width: '125px', height: '40px', textTransform: 'none', fontFamily: "'Raleway', sans-serif" }} color="secondary">
+            Professional
+          </ToggleButton>
+        </ToggleButtonGroup>
 
-        <label>
-          Name:
-          
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <input type="submit" value="Submit" />
+        <textarea placeholder={`Type your ${type} task here...`} style={{ border: `2px solid ${borderColor}` }} value={name} onChange={(e) => setName(e.target.value)} />
+        <button type="submit" value="Submit">Post Todo</button>
       </form>
-    </div>
+      <section id="todo-display">
+      {arrayOfObjects.map((object) => (
+        <TodoItem id={object.id} type={object.type} name={object.name} />
+      ))}
+      </section>
+    </main>
   )
 }
 export default App;

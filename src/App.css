@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&family=Raleway&display=swap');
+
+form textarea {
+  resize: none;
+  width: 700px;
+  height: 400px;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #090A09;
+  border: rgba(0, 255, 255, 0.315) 2px solid;
+  transition: border ease 0.2s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form textarea:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  height: 84vh;
+  padding-bottom: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  color: #f3f3f3;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  background-color: #0ca08a;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 164px;
+  height: 48px;
+  border-radius: 60px;
+  transition: all ease-out 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form button:hover {
+  filter: brightness(1.10)
+}
+
+body {
+  background-image: linear-gradient(to top, #090A09, rgba(0, 0, 0, 0.178)), url('../public/img/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #090A09;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+* {
+  color: #eaf1ee;
+}
+
+#todo-display {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+  form textarea {
+    width: 85%;
+    height: 300px;
   }
-  to {
-    transform: rotate(360deg);
+  form {
+    height: 65vh;
   }
 }
