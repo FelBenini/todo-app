@@ -38,10 +38,10 @@ function App() {
         onChange={handleAlignment}
         aria-label="text alignment"
       >
-        <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '50px', width: '300px'}}>
+        <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '50px', width: '50vw'}}>
           Personal
         </ToggleButton>
-        <ToggleButton value="professional" aria-label="centered" sx={{ borderRadius: '50px', width: '300px'}}>
+        <ToggleButton value="professional" aria-label="centered" sx={{ borderRadius: '50px', width: '50vw'}}>
           Professional
         </ToggleButton>
       </ToggleButtonGroup>
