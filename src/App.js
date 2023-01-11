@@ -28,9 +28,9 @@ function App() {
       setType(event.target.value);
     }
     if (type === "professional") {
-      setBorderColor('#09CAAD80')
+      setBorderColor('#09CAAD')
     } else if (type === "personal") {
-      setBorderColor('#D5804280')
+      setBorderColor('#D58042')
     }
   };
 
@@ -46,8 +46,8 @@ function App() {
           </ToggleButton>
         </ToggleButtonGroup>
 
-        <textarea placeholder={`Type your ${type} task here...`} style={{ border: `2px solid ${borderColor}` }} value={name} onChange={(e) => setName(e.target.value)} />
-        <button type="submit" value="Submit">Post Todo</button>
+        <textarea placeholder={`Type your ${type} task here...`} style={{ border: `2px solid ${borderColor}80` }} value={name} onChange={(e) => setName(e.target.value)} />
+        <button style={{backgroundColor: borderColor}} type="submit" value="Submit">Post Todo<img src="/img/bx-plus.svg" alt="plus icon"/></button>
       </form>
       <section id="todo-display">
       {arrayOfObjects.map((object) => (

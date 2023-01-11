@@ -2,12 +2,12 @@
 
 form textarea {
   resize: none;
-  width: 700px;
+  width: 688px;
   height: 400px;
   background-color: transparent;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 8px;
   background-color: #090A09;
   border: rgba(0, 255, 255, 0.315) 2px solid;
@@ -26,7 +26,7 @@ form {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  height: 84vh;
+  height: 92vh;
   padding-bottom: 5vh;
 }
 
@@ -35,18 +35,24 @@ form button {
   cursor: pointer;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 700;
-  background-color: #0ca08a;
+  background-color: #09CAAD;
   font-size: 20px;
   border: none;
   outline: none;
-  width: 164px;
-  height: 48px;
+  width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 60px;
   border-radius: 60px;
   transition: all ease-out 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  filter: brightness(0.85), saturate(1.05);
 }
 
 form button:hover {
-  filter: brightness(1.10)
+  filter: brightness(1)
 }
 
 body {
@@ -60,6 +66,7 @@ body {
 
 * {
   color: #eaf1ee;
+  font-family: 'Raleway', sans-serif;;
 }
 
 #todo-display {
@@ -68,6 +75,42 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.todo-item {
+  width: 80%;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  padding: 0px 12px;
+  height: fit-content;
+}
+
+.personal {
+  border: #09caad56 1.4px solid;
+  background-color: #0e0f0f;
+}
+
+.personal h3 {
+  color: #4ad4c0;
+  text-transform: capitalize;
+}
+
+.professional {
+  border: #d57f4250 1.4px solid;
+  background-color: #11100f;
+}
+
+.professional h3 {
+  color: #d49b72;
+  text-transform: capitalize;
+}
+
+.todo-item h3::before {
+  content: '⬤';
+  font-size: 10px;
+  position: relative;
+  margin-right: 4px;
+  top: -3px;
 }
 
 @media screen and (max-width: 700px) {
