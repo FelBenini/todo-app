@@ -79,7 +79,7 @@ body {
 
 .todo-item {
   width: 80%;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   border-radius: 8px;
   padding: 0px 12px;
   height: fit-content;
@@ -90,7 +90,7 @@ body {
   background-color: #0e0f0f;
 }
 
-.personal h3 {
+.personal h5 {
   color: #4ad4c0;
   text-transform: capitalize;
 }
@@ -100,17 +100,22 @@ body {
   background-color: #11100f;
 }
 
-.professional h3 {
+.professional h5 {
   color: #d49b72;
   text-transform: capitalize;
 }
 
-.todo-item h3::before {
+.todo-item h5::before {
   content: '⬤';
-  font-size: 10px;
+  font-size: 6px;
   position: relative;
   margin-right: 4px;
-  top: -3px;
+  top: -2px;
+}
+
+.todo-item p {
+  margin-top: -6px;
+  margin-left: 12px;
 }
 
 @media screen and (max-width: 700px) {
