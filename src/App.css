@@ -69,12 +69,26 @@ body {
   font-family: 'Raleway', sans-serif;;
 }
 
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2525256e;
+  border-radius: 10px;
+}
+
 #todo-display {
   width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-image: linear-gradient(to top, #0e0f0f, #0e0f0f, #0e0f0f, transparent);
 }
 
 .todo-item {
@@ -83,6 +97,7 @@ body {
   border-radius: 8px;
   padding: 0px 12px;
   height: fit-content;
+  box-shadow: 0px 8px 8px #0000003a;
 }
 
 .personal {
@@ -125,5 +140,8 @@ body {
   }
   form {
     height: 65vh;
+  }
+  .todo-item {
+    width: 95%;
   }
 }
