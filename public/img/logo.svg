@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1824" height="1116" viewBox="0 0 1824 1116">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 500px;
+        fill: #f3f3f3;
+        text-anchor: middle;
+        font-family: "Montserrat Alternates";
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="TODO" class="cls-1" x="915.998" y="466.998"><tspan x="915.998">TODO</tspan></text>
+  <text id="APP" class="cls-1" transform="translate(889.096 990.225) scale(1.212)"><tspan x="0">APP</tspan></text>
+</svg>

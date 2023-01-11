@@ -17,7 +17,7 @@ function Header() {
 
     return (
         <header className={classes}>
-            <h2>Logo title</h2>
+            <img src="/img/logo.svg" alt="logo"/>
             <a href="#form-todo"><button>New todo</button></a>
         </header>
     )
