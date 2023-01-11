@@ -4,6 +4,7 @@ import { useState } from 'react';
 import TodoItem from './components/todo-item';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import Header from './components/header';
 
 const cookies = new Cookies()
 
@@ -17,8 +18,8 @@ function App() {
     e.preventDefault();
     if (name !== "") {
       const newObject = { id: Date.now(), name, situation: "incomplete", type: type };
-      setArrayOfObjects([...arrayOfObjects, newObject]);
-      cookies.set('arrayOfObjects', [...arrayOfObjects, newObject], { path: '/' });
+      setArrayOfObjects([newObject, ...arrayOfObjects ]);
+      cookies.set('arrayOfObjects', [newObject, ...arrayOfObjects], { path: '/' });
       setName('')
     }
   }
@@ -36,7 +37,8 @@ function App() {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <Header/>
+      <form id="form-todo" onSubmit={handleSubmit}>
         <ToggleButtonGroup value={type} exclusive onChange={handleTypeChange} aria-label="text alignment">
           <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '4px', width: '125px', height: '40px', textTransform: 'none', fontFamily: "'Raleway', sans-serif" }} color="primary">
             Personal
