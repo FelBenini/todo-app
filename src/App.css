@@ -21,6 +21,7 @@ form textarea {
   margin-right: calc(40% - 20px);
   text-align: center;
   -webkit-user-drag: none;
+  margin-top: 2.5vh;
   user-select: none;
 }
 
@@ -76,6 +77,7 @@ form {
   backdrop-filter: blur(30px);
   border: 1.4px solid #dadfde15;
   border-radius: 4px;
+  padding: 20px 0px;
 }
 
 form button {
@@ -189,7 +191,7 @@ body {
 @media screen and (max-width: 700px) {
   form textarea {
     width: 85%;
-    height: 300px;
+    height: 250px;
   }
   form {
     height: 65vh;
