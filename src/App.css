@@ -20,6 +20,8 @@ form textarea {
   margin-left: calc(50% - 215px);
   margin-right: calc(50% - 215px);
   text-align: center;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 header {
@@ -47,6 +49,8 @@ header {
 
 header img {
   width: 80px;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .header-active {
