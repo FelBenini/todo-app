@@ -14,13 +14,21 @@ form textarea {
   transition: border ease 0.2s;
 }
 
+#todo-app-logo {
+  width: 430px;
+  filter: brightness(0.90);
+  margin-left: calc(50% - 215px);
+  margin-right: calc(50% - 215px);
+  text-align: center;
+}
+
 header {
   display: flex;
-  height: 64px;
+  height: 72px;
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
@@ -29,10 +37,10 @@ header {
   padding-left: 5%;
   padding-right: 5%;
   background-color: #02020267;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   z-index: 100;
-  transform: translateY(-100px);
-  transition: all ease-in 0.25s;
+  transform: translateY(-150px);
+  transition: all ease-in 0.15s;
   border-radius: 8px;
   border: #eaf1ee27 1.4px solid;
 }
@@ -52,13 +60,18 @@ form textarea:focus {
 form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 800px;
   justify-content: space-around;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   height: 600px;
-  padding-bottom: 5vh;
+  margin-bottom: 5vh;
+  margin-top: 20px;
+  background-color: #090a0991;
+  backdrop-filter: blur(30px);
+  border: 1.4px solid #dadfde15;
+  border-radius: 4px;
 }
 
 form button {
@@ -91,7 +104,7 @@ form button:hover {
 }
 
 body {
-  background-image: linear-gradient(to top, #090A09, rgba(0, 0, 0, 0.178)), url('../public/img/background.png');
+  background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #090A09;
@@ -176,6 +189,7 @@ body {
   }
   form {
     height: 65vh;
+    width: 95%;
   }
   .todo-item {
     width: 90%;

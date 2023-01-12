@@ -38,6 +38,7 @@ function App() {
   return (
     <main>
       <Header/>
+      <img src="/img/logo.svg" alt="todo app logo" id="todo-app-logo"/>
       <form id="form-todo" onSubmit={handleSubmit}>
         <ToggleButtonGroup value={type} exclusive onChange={handleTypeChange} aria-label="text alignment">
           <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '4px', width: '125px', height: '40px', textTransform: 'none', fontFamily: "'Raleway', sans-serif" }} color="primary">
