@@ -15,10 +15,10 @@ form textarea {
 }
 
 #todo-app-logo {
-  width: 430px;
+  width: calc(20% + 40px);
   filter: brightness(0.90);
-  margin-left: calc(50% - 215px);
-  margin-right: calc(50% - 215px);
+  margin-left: calc(40% - 20px);
+  margin-right: calc(40% - 20px);
   text-align: center;
   -webkit-user-drag: none;
   user-select: none;
