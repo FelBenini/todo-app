@@ -200,4 +200,7 @@ body {
   .todo-item {
     width: 90%;
   }
+  body {
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.png');
+  }
 }

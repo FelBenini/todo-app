@@ -6,19 +6,22 @@ function Header() {
     useEffect(() => {
         return () => {
             window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 800) {
+                if (window.pageYOffset > 750) {
                     setClasses('header-active')
-                } else if (window.pageYOffset <= 800) {
+                } else if (window.pageYOffset <= 750) {
                     setClasses('')
                 }
             })
         }
     }, [setClasses])
+    function handleNavigation() {
+        window.scrollTo(0, 0)
+    }
 
     return (
         <header className={classes}>
             <img src="/img/logo.svg" alt="logo"/>
-            <a href="#form-todo"><button>New todo</button></a>
+            <button onClick={handleNavigation}>New todo</button>
         </header>
     )
 }
