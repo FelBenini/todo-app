@@ -6,7 +6,7 @@ const cookies = new Cookies()
 const Cookie = createContext();
 
 const CookieContext = ({ children }) => {
-    const [arrayOfTodos, setArrayOfTodos] = useState(cookies.get('arrayOfObjects') || []);
+    const [arrayOfTodos, setArrayOfTodos] = useState(cookies.get('arrayOfTodos') || []);
     return (
         <Cookie.Provider value={{ arrayOfTodos, setArrayOfTodos }}>
             {children}

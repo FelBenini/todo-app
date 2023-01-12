@@ -6,9 +6,9 @@ function Header() {
     useEffect(() => {
         return () => {
             window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 750) {
+                if (window.pageYOffset > 700) {
                     setClasses('header-active')
-                } else if (window.pageYOffset <= 750) {
+                } else if (window.pageYOffset <= 700) {
                     setClasses('')
                 }
             })

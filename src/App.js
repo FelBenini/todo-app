@@ -20,7 +20,7 @@ function App() {
     if (name !== "") {
       const newObject = { id: Date.now(), name, situation: "incomplete", type: type };
       setArrayOfTodos([newObject, ...arrayOfTodos ]);
-      cookies.set('arrayOfObjects', [newObject, ...arrayOfTodos], { path: '/' });
+      cookies.set('arrayOfTodos', [newObject, ...arrayOfTodos], { path: '/' });
       setName('')
     }
   }
