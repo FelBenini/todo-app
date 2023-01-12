@@ -24,15 +24,17 @@ header {
   margin-left: auto;
   margin-right: auto;
   position: fixed;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 0px 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #02020267;
   backdrop-filter: blur(10px);
   z-index: 100;
   transform: translateY(-100px);
   transition: all ease-in 0.25s;
   border-radius: 8px;
+  border: #eaf1ee27 1.4px solid;
 }
 
 header img {
@@ -65,19 +67,23 @@ form button {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 700;
   background-color: #09CAAD;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   outline: none;
-  width: 150px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 60px;
+  width: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 48px;
   border-radius: 60px;
   transition: all ease-out 0.2s;
   display: flex;
   align-items: center;
   justify-content: space-around;
   filter: brightness(0.85), saturate(1.05);
+}
+
+button img {
+  width: 24px;
 }
 
 form button:hover {
