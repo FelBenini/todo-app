@@ -5,12 +5,13 @@ import TodoItem from './components/todo-item';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Header from './components/header';
+import { CookieState } from './cookiesContext';
 
 const cookies = new Cookies()
 
 function App() {
   const [type, setType] = useState('personal')
-  const [arrayOfTodos, setArrayOfTodos] = useState(cookies.get('arrayOfObjects') || []);
+  const {arrayOfTodos, setArrayOfTodos} = CookieState()
   const [name, setName] = useState('');
   const [borderColor, setBorderColor] = useState()
 
