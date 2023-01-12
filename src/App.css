@@ -15,13 +15,13 @@ form textarea {
 }
 
 #todo-app-logo {
-  width: calc(20% + 40px);
+  width: calc(24% + 60px);
   filter: brightness(0.90);
-  margin-left: calc(40% - 20px);
-  margin-right: calc(40% - 20px);
+  margin-left: calc(38% - 30px);
+  margin-right: calc(38% - 30px);
   text-align: center;
   -webkit-user-drag: none;
-  margin-top: 2.5vh;
+  margin-top: 2vh;
   user-select: none;
 }
 
@@ -46,6 +46,7 @@ header {
   transition: all ease-in 0.15s;
   border-radius: 8px;
   border: #eaf1ee27 1.4px solid;
+  box-shadow: rgba(0, 0, 0, 0.562) 0px 8px 24px;
 }
 
 header img {
