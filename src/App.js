@@ -10,7 +10,7 @@ const cookies = new Cookies()
 
 function App() {
   const [type, setType] = useState('personal')
-  const [arrayOfObjects, setArrayOfObjects] = useState(cookies.get('arrayOfObjects') || []);
+  const [arrayOfTodos, setArrayOfTodos] = useState(cookies.get('arrayOfObjects') || []);
   const [name, setName] = useState('');
   const [borderColor, setBorderColor] = useState()
 
@@ -18,8 +18,8 @@ function App() {
     e.preventDefault();
     if (name !== "") {
       const newObject = { id: Date.now(), name, situation: "incomplete", type: type };
-      setArrayOfObjects([newObject, ...arrayOfObjects ]);
-      cookies.set('arrayOfObjects', [newObject, ...arrayOfObjects], { path: '/' });
+      setArrayOfTodos([newObject, ...arrayOfTodos ]);
+      cookies.set('arrayOfObjects', [newObject, ...arrayOfTodos], { path: '/' });
       setName('')
     }
   }
@@ -53,7 +53,7 @@ function App() {
         <button style={{backgroundColor: borderColor}} type="submit" value="Submit">Post Todo<img src="/img/bx-plus.svg" alt="plus icon"/></button>
       </form>
       <section id="todo-display">
-      {arrayOfObjects.map((object) => (
+      {arrayOfTodos.map((object) => (
         <TodoItem id={object.id} type={object.type} name={object.name} />
       ))}
       </section>
