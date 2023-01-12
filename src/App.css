@@ -49,6 +49,31 @@ header {
   box-shadow: rgba(0, 0, 0, 0.562) 0px 8px 24px;
 }
 
+header button {
+  background-color: transparent;
+  font-size: 16px;
+  color: #09CAAD;
+  border: 1.2px solid #09caad5e;
+  border-radius: 60px;
+  padding: 8px 12px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 116px;
+  transition: all ease-in 0.1s;
+}
+
+header button b {
+  font-size: 24px;
+  color: #09CAAD;
+}
+
+header button:active {
+  transform: scale(1.1);
+}
+
 header img {
   width: 80px;
   -webkit-user-drag: none;

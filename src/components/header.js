@@ -21,7 +21,7 @@ function Header() {
     return (
         <header className={classes}>
             <img src="/img/logo.svg" alt="logo"/>
-            <button onClick={handleNavigation}>New todo</button>
+            <button onClick={handleNavigation}>New todo <b>+</b></button>
         </header>
     )
 }
