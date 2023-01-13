@@ -7,8 +7,13 @@ const Cookie = createContext();
 
 const CookieContext = ({ children }) => {
     const [arrayOfTodos, setArrayOfTodos] = useState(cookies.get('arrayOfTodos') || []);
+    function deleteTodos(id) {
+        var filtered = arrayOfTodos.filter((todo) => todo.id !== id);
+        setArrayOfTodos(filtered);
+        cookies.set('arrayOfTodos', filtered, { path: '/' });
+    }
     return (
-        <Cookie.Provider value={{ arrayOfTodos, setArrayOfTodos }}>
+        <Cookie.Provider value={{ arrayOfTodos, setArrayOfTodos, deleteTodos }}>
             {children}
         </Cookie.Provider>
     )

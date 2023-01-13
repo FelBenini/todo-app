@@ -16,7 +16,7 @@ function Form() {
     function handleSubmit(e) {
         e.preventDefault();
         if (name !== "") {
-            const newObject = { id: Date.now(), name, situation: "incomplete", type: type };
+            const newObject = { id: Date.now(), name: name, situation: "incomplete", type: type };
             setArrayOfTodos([newObject, ...arrayOfTodos]);
             cookies.set('arrayOfTodos', [newObject, ...arrayOfTodos], { path: '/' });
             setName('')
