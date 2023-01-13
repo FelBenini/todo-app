@@ -20,6 +20,7 @@ function Form() {
             setArrayOfTodos([newObject, ...arrayOfTodos]);
             cookies.set('arrayOfTodos', [newObject, ...arrayOfTodos], { path: '/' });
             setName('')
+            window.scrollTo(0, 500)
         }
     }
 
