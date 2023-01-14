@@ -270,7 +270,7 @@ body {
 
 @media screen and (max-width: 700px) {
   form textarea {
-    width: 85%;
+    width: 90%;
     height: 250px;
   }
   form {
@@ -282,5 +282,13 @@ body {
   }
   body {
     background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.png');
+  }
+  .deletion-menu {
+    padding-right: 12px;
+    padding-left: 12px;
+    width: calc(100% + 46px);
+  }
+  .deletion-menu h3 {
+    font-size: 15px;
   }
 }
