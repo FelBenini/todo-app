@@ -27,6 +27,22 @@ function App() {
       setTodoDisplay(arrayOfTodos.filter(element => element.type === "professional"))
     }
   }, [display, arrayOfTodos, setTodoDisplay])
+
+  function MappedTasks() {
+    if(todoDisplay.length === 0) {
+      return (
+        <div id="no-tasks">
+        <h2>There is no Tasks to display here</h2>
+        <h4>Start writing some tasks now!</h4>
+        </div>
+      )
+    } else {
+      return (
+      todoDisplay.map((object) => (
+          <TodoItem id={object.id} type={object.type} name={object.name} />
+        )))
+    }
+  }
   
   return (
     <main>
@@ -39,9 +55,8 @@ function App() {
           <ToggleButton value={'personal'}>PERSONAL</ToggleButton>
           <ToggleButton value={'professional'}>PROFESSIONAL</ToggleButton>
         </ToggleButtonGroup>
-        {todoDisplay.map((object) => (
-          <TodoItem id={object.id} type={object.type} name={object.name} />
-        ))}
+        
+        <MappedTasks/>
       </section>
     </main>
   )
