@@ -52,8 +52,8 @@ function App() {
       <section id="todo-display">
         <ToggleButtonGroup value={display} onChange={handleDisplayChange}>
           <ToggleButton value={'all'}>ALL</ToggleButton>
-          <ToggleButton value={'personal'}>PERSONAL</ToggleButton>
-          <ToggleButton value={'professional'}>PROFESSIONAL</ToggleButton>
+          <ToggleButton color="primary" value={'personal'}>PERSONAL</ToggleButton >
+          <ToggleButton color="secondary" value={'professional'}>PROFESSIONAL</ToggleButton>
         </ToggleButtonGroup>
         
         <MappedTasks/>
