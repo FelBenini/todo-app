@@ -14,14 +14,16 @@ function TodoItem(props) {
                     <p>{props.name}</p>
                 </span>
                 <span>
-                    <IconButton key={props.id} size="large" onClick={() => setDeletion('deletion-menu')}>
+                    <IconButton key={props.id} size="large" onClick={() => {setDeletion('deletion-menu')}}>
                         <img src="/img/trash-can.svg" alt="delete task" />
                     </IconButton>
                 </span>
             </section>
             {/*Deletion section*/}
             <div className={deletion}><h3>Are you sure you want to delete this todo?</h3> <span className="buttons-deletion">
-                <IconButton sx={{ width: '60px', height: '60px' }} onClick={() => deleteTodos(props.id)}>YES</IconButton>
+                <IconButton sx={{ width: '60px', height: '60px' }} onClick={() => {deleteTodos(props.id)
+                setDeletion('deletion-menu hidden-deletion')
+                }}>YES</IconButton>
                 <IconButton sx={{ width: '60px', height: '60px' }} onClick={() => setDeletion('deletion-menu hidden-deletion')}>NO</IconButton>
             </span>
             </div>
