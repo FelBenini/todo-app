@@ -254,8 +254,7 @@ body {
   opacity: 1;
   justify-content: space-between;
   transition: all ease 0.2s;
-  background-color: #3f0c0c;
-  border: 2px solid #8a7d7d;
+  background-color: #090A09;
 }
 
 .deletion-menu .buttons-deletion {
