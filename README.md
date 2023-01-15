@@ -6,7 +6,6 @@ This is a simple todo app built with React, React-Cookie, and Material-UI. The a
 
 - Create new todos
 - View existing todos
-- Update existing todos
 - Delete existing todos
 - Data storage using React-Cookie
 - Material-UI for some styling and UI elements

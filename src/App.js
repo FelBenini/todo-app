@@ -32,7 +32,7 @@ function App() {
     if(todoDisplay.length === 0) {
       return (
         <div id="no-tasks">
-        <h2>There is no Tasks to display here</h2>
+        <h2>There is no Tasks to display here for now</h2>
         <h4>Start writing some tasks now!</h4>
         </div>
       )
