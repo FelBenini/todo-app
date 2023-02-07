@@ -15,12 +15,12 @@ code {
 
 @media screen and (max-width: 1920px) {
   body {
-    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-1080.png');
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-1080.webp');
   }
 }
 
 @media screen and (max-width: 700px) {
   body {
-    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.png');
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.webp');
   }
 }
