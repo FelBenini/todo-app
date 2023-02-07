@@ -8,15 +8,15 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 const cookies = new Cookies()
 
 function Form() {
-    const { arrayOfTodos, setArrayOfTodos } = CookieState()
+    const { arrayOfTodos, setArrayOfTodos }: any = CookieState()
     const [name, setName] = useState('');
-    const [borderColor, setBorderColor] = useState()
+    const [borderColor, setBorderColor] = useState<string>()
     const [type, setType] = useState('personal')
 
-    function handleSubmit(e) {
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if (name !== "") {
-            const newObject = { id: Date.now(), name: name, situation: "incomplete", type: type };
+            const newObject = { id: `${Date.now()}`, name: name, situation: "incomplete", type: type };
             setArrayOfTodos([newObject, ...arrayOfTodos]);
             cookies.set('arrayOfTodos', [newObject, ...arrayOfTodos], { path: '/' });
             setName('')
@@ -24,9 +24,9 @@ function Form() {
         }
     }
 
-    const handleTypeChange = (event, newAlignment) => {
+    const handleTypeChange = (event: React.FormEvent<HTMLFormElement>, newAlignment: any) => {
         if (newAlignment !== null) {
-            setType(event.target.value);
+            setType((event.target as HTMLInputElement).value);
         }
         if (type === "professional") {
             setBorderColor('#09CAAD')
@@ -36,7 +36,7 @@ function Form() {
     };
     return (
         <form id="form-todo" onSubmit={handleSubmit}>
-            <ToggleButtonGroup value={type} exclusive onChange={handleTypeChange} aria-label="text alignment">
+            <ToggleButtonGroup value={type} exclusive onChange={(e: any, newAlignment: any) => {handleTypeChange(e, newAlignment)}} aria-label="text alignment">
                 <ToggleButton value="personal" aria-label="left aligned" sx={{ borderRadius: '4px', width: '125px', height: '40px', textTransform: 'none', fontFamily: "'Raleway', sans-serif" }} color="primary">
                     Personal
                 </ToggleButton>

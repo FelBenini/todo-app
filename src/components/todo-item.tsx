@@ -2,9 +2,10 @@ import React from 'react'
 import { IconButton } from '@mui/material'
 import { CookieState } from '../cookiesContext'
 import { useState } from 'react';
+import { TodoType } from '../types';
 
-function TodoItem(props) {
-    const { deleteTodos } = CookieState();
+function TodoItem(props: TodoType) {
+    const { deleteTodos }: any = CookieState();
     const [deletion, setDeletion] = useState('deletion-menu hidden-deletion')
     return (
         <div key={props.id} className={`todo-item ${props.type}`}>
