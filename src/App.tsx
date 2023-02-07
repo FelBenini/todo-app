@@ -9,7 +9,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const { arrayOfTodos }: any = CookieState()
+  const { arrayOfTodos, finishedTodos }: any = CookieState()
   const [display, setDisplay] = useState('all')
   const [todoDisplay, setTodoDisplay] = useState(arrayOfTodos)
 
@@ -26,8 +26,10 @@ function App() {
       setTodoDisplay(arrayOfTodos.filter((element: TodoType) => element.type === "personal"))
     } else if (display === "professional") {
       setTodoDisplay(arrayOfTodos.filter((element: TodoType) => element.type === "professional"))
+    } else if (display === "finished") {
+      setTodoDisplay(finishedTodos)
     }
-  }, [display, arrayOfTodos, setTodoDisplay])
+  }, [display, arrayOfTodos, finishedTodos])
 
   function MappedTasks() {
     if(todoDisplay.length === 0) {
@@ -40,7 +42,7 @@ function App() {
     } else {
       return (
       todoDisplay.map((object: TodoType) => (
-          <TodoItem id={object.id} type={object.type} name={object.name} />
+          <TodoItem id={object.id} type={object.type} name={object.name} situation={object.situation} finishedAt={object.finishedAt}/>
         )))
     }
   }
@@ -55,6 +57,7 @@ function App() {
           <ToggleButton value={'all'}>ALL</ToggleButton>
           <ToggleButton color="primary" value={'personal'}>PERSONAL</ToggleButton >
           <ToggleButton color="secondary" value={'professional'}>PROFESSIONAL</ToggleButton>
+          <ToggleButton value={'finished'}>DONE</ToggleButton>
         </ToggleButtonGroup>
         
         <MappedTasks/>

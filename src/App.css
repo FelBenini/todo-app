@@ -2,8 +2,8 @@
 
 form textarea {
   resize: none;
-  width: 688px;
-  height: 350px;
+  width: 588px;
+  height: 150px;
   background-color: transparent;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -15,10 +15,10 @@ form textarea {
 }
 
 #todo-app-logo {
-  width: calc(24% + 60px);
+  width: calc(20%);
   filter: brightness(0.90);
-  margin-left: calc(38% - 30px);
-  margin-right: calc(38% - 30px);
+  margin-left: calc(40%);
+  margin-right: calc(40%);
   text-align: center;
   -webkit-user-drag: none;
   margin-top: 2vh;
@@ -91,12 +91,12 @@ form textarea:focus {
 form {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 650px;
   justify-content: space-around;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
+  height: 300px;
   margin-bottom: 5vh;
   margin-top: 20px;
   background-color: #090a0991;
@@ -192,6 +192,7 @@ body {
   min-height: 100px;
   height: fit-content;
   box-shadow: 0px 8px 8px #0000003a;
+  word-break: break-all;
 }
 
 .todo-item section {
@@ -203,8 +204,8 @@ body {
   width: 100%;
 }
 
-.todo-item:first-child {
-  width: 80%;
+.todo-item section span:first-child {
+  width: 70%;
 }
 
 .personal {
@@ -238,6 +239,17 @@ body {
 .todo-item p {
   margin-top: -6px;
   margin-left: 12px;
+}
+
+.todo-done {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-done p {
+  margin: 0;
 }
 
 .deletion-menu {
@@ -278,6 +290,8 @@ body {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #no-tasks h2 {
