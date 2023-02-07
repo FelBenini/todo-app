@@ -241,6 +241,11 @@ body {
   margin-left: 12px;
 }
 
+.todo-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
 .todo-done {
   align-self: stretch;
   display: flex;
@@ -250,6 +255,8 @@ body {
 
 .todo-done p {
   margin: 0;
+  font-style: italic;
+  color: #eaf1ee8f;
 }
 
 .deletion-menu {
@@ -311,6 +318,10 @@ body {
   }
   .todo-item {
     width: 90%;
+  }
+  .todo-done p {
+    margin: 0;
+    word-break: keep-all;
   }
   body {
     background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.webp');

@@ -23,7 +23,7 @@ function TodoItem(props: TodoType) {
                     <p>{props.name}</p>
                 </span>
                 {props.situation === "incomplete" ?
-                    <span>
+                    <span className='todo-buttons'>
                         <IconButton key={props.id} size="large" onClick={() => { pushToFinshedTodos()
                         deleteTodos(props.id) }}>
                             <img src="/img/check-icon.svg" alt="mark task as completed" />
