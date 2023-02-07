@@ -12,3 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media screen and (max-width: 1920px) {
+  body {
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-1080.png');
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-mobile.png');
+  }
+}
