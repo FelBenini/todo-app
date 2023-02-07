@@ -310,3 +310,9 @@ body {
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 1920px) {
+  body {
+    background-image: linear-gradient(to top, #090A09, #ffffff0c), url('../public/img/background-1080.png');
+  }
+}
